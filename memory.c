@@ -4,7 +4,7 @@
 #include <stdbool.h>
 
 struct MEMORY_BLOCK best_fit_allocate(int request_size, struct MEMORY_BLOCK memory_map[MAPMAX], int *map_cnt, int process_id){
-    struct MEMORY_BLOCK temp_memory_block, allo_memory;
+    struct MEMORY_BLOCK temp_memory_block, allo_mem;
     allo_mem.end_address = 0;
     allo_mem.start_address = 0;
     allo_mem.process_id = 0;
