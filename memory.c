@@ -1,4 +1,6 @@
 #include "oslabs.h"
+#include <stdio.h>
+#include <string.h>
 #include <stdbool.h>
 
 struct MEMORY_BLOCK best_fit_allocate(int request_size,
