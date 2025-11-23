@@ -14,13 +14,13 @@ struct MEMORY_BLOCK best_fit_allocate(int request_size, struct MEMORY_BLOCK memo
 
     //find the candidate memory blocks that can be allocated and chooses the one whose size is closest to the requested size
     for(int i = 0; i <= *map_cnt - 1; i++){
-      if(req_size == memory_map[i].segment_size){
+      if(request_size == memory_map[i].segment_size){
         match = true;
         memory_map_index = i;
         best_fit_segment = request_size;
         break;
       }
-      else if((memory_map[i].seg_size > req_size)&&(memory_map[i].process_id == 0)) {
+      else if((memory_map[i].segment_size > req_size)&&(memory_map[i].process_id == 0)) {
         if(match==false){
           match=true;
           memory_map_index = i;
