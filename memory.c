@@ -20,11 +20,11 @@ struct MEMORY_BLOCK best_fit_allocate(int request_size, struct MEMORY_BLOCK memo
         best_fit_segment = request_size;
         break;
       }
-      else if((memory_map[i].segment_size > req_size)&&(memory_map[i].process_id == 0)) {
+      else if((memory_map[i].segment_size > request_size)&&(memory_map[i].process_id == 0)) {
         if(match==false){
           match=true;
           memory_map_index = i;
-          best_fit_segment = memory_map[i].segment_size)}
+          best_fit_segment = memory_map[i].segment_size}
         else{
           if(best_fit_segment > memory_map[i].segment_size){
             memory_map_index = i;
